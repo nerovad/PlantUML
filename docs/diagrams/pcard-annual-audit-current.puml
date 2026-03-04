@@ -1,0 +1,40 @@
+@startuml pcard-annual-audit-current
+title P-Card Annual Audit Process (Current - To Be Replaced)
+
+skinparam activityBackgroundColor #FFF8F0
+skinparam activityBorderColor #B44646
+
+|Procurement Services|
+start
+:Send audit memo, audit form,\nand agency spreadsheet\nto each agency;
+
+|Agency / Department Head|
+:Receive audit documents;
+:Verify cardholder and\napprover listing;
+
+if (Changes needed?) then (no)
+  :Check "listing is correct"\non audit form;
+  :Sign and date form;
+else (yes)
+  :Highlight changes in\nbright color on spreadsheet;
+  :Sign and date audit form;
+  :Attach updated spreadsheet;
+endif
+
+:Return form (and spreadsheet\nif changes) to Geraldine\nvia email;
+
+|Procurement Services|
+:Receive completed audit;
+:Process any requested changes;
+:Update P-Card inventory;
+stop
+
+note right
+  **Pain Points (to automate in Paperboy):**
+  - Manual email-based process
+  - Paper/PDF forms and spreadsheets
+  - Relies on annual cycle instead of real-time
+  - No tracking of response status
+end note
+
+@enduml

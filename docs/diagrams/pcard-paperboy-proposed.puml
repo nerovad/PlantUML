@@ -1,0 +1,53 @@
+@startuml pcard-paperboy-proposed
+title P-Card Management - Proposed Paperboy Workflow
+
+skinparam activityBackgroundColor #F0FFF0
+skinparam activityBorderColor #46B446
+
+|Employee|
+start
+:Submit P-Card request\nvia Paperboy form;
+
+|Supervisor|
+:Receive notification;
+:Approve / deny in Paperboy;
+
+|Bill Responsible Party|
+:Receive notification;
+:Approve / deny in Paperboy;
+
+|Department Head|
+:Receive notification;
+:Approve / deny in Paperboy;
+
+|Procurement Services|
+:Geraldine or Julie Miller
+receives approved request;
+:Order card;
+:Mark training required;
+
+|Employee|
+repeat
+  :Take training exam;
+repeat while (Pass?) is (no) not (yes)
+
+|Procurement Services|
+:Record training completion;
+:Notify employee - card ready;
+
+|Employee|
+:Pick up card;
+
+|Procurement Services|
+:P-Card inventory auto-updated;
+stop
+
+note right
+  **Replaces annual audit:**
+  - Inventory stays current in real-time
+  - Admin council can review/modify
+    cardholder list at any time
+  - No more annual email audit cycle
+end note
+
+@enduml
