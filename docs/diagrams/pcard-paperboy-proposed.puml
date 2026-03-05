@@ -12,13 +12,37 @@ start
 :Receive notification;
 :Approve / deny in Paperboy;
 
+note right
+  **All requests require approval.**
+  No classification is exempt.
+  If the requestor is a supervisor,
+  another authority must approve
+  (e.g., Supervisor Long → Dr. Johnson).
+  This ensures checks and balances.
+end note
+
 |Bill Responsible Party|
 :Receive notification;
 :Approve / deny in Paperboy;
 
+note right
+  **Determined by the agency.**
+  Normally someone in the Fiscal Dept.
+  Example: Dana Vodantis is the
+  Bill Responsible Party for GSA P-Cards.
+end note
+
 |Department Head|
 :Receive notification;
 :Approve / deny in Paperboy;
+
+note right
+  **Varies by agency.**
+  Typically a Director or Deputy Director.
+  Examples:
+  - Sheriff's Office → Sheriff / Asst. Sheriff
+  - FPD → Fire Chief / Deputy Chief
+end note
 
 |Procurement Services|
 :Geraldine or Julie Miller
@@ -28,7 +52,7 @@ receives approved request;
 
 |Employee|
 repeat
-  :Take training exam;
+  :Take training exam\nin VCLearning Hub;
 repeat while (Pass?) is (no) not (yes)
 
 |Procurement Services|
